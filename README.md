@@ -23,6 +23,26 @@ Lotshot requires the following dependencies for its full functionality (excludin
 npm install express reflect-metadata class-validator class-transformer socket.io @types/express @types/socket.io
 ```
 
+tsconfig.json:
+```js
+{
+  "compilerOptions": {
+    // 1. Enables the use of the @decorator syntax
+    "experimentalDecorators": true,
+
+    // 2. Enables the TypeScript compiler to emit type metadata 
+    // (design:type, design:paramtypes, etc.) when a decorator is present.
+    // This metadata is read by 'reflect-metadata' at runtime.
+    "emitDecoratorMetadata": true,
+    
+    // It's also typical to include "moduleResolution": "node" for a Node.js project.
+    "moduleResolution": "node"
+  }
+}
+```
+
+> import 'reflect-metadata'; // <-- This must be included at the top of the application entry point
+
 ### Core Concepts
 
 #### 1\. Controllers and Routing
