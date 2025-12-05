@@ -1,6 +1,7 @@
-# lotshot
+# Lotshot
 
 ## 📄 Lotshot Framework Documentation
+*Apache License 2.0*
 
 ### Lotshot: A Decoupled API Framework
 
